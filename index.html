@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+     
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <img src="img/logo.png" alt=""> 
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> INE
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">inventory_2</span> Desarrollo
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">groups</span> Usuarios
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">fact_check</span> Estado
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">poll</span> Reportes
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">settings</span> Configuración
+            </a>
+          </li>
+        </ul>
+      </aside>
+      
+      <main class="main-container">
+        <div class="main-title">
+          <h2>Dirección de Estadística y Documentación Electoral</h2>
+        </div>
+
+        <!-- === -->
+        <div class="main-cards">
+
+            <div class="card">
+              <div class="card-inner">
+                <h3>INVENTARIO</h3>
+              </div>
+              <div class="radial" id="radial-chart"></div>
+              <h1>2049</h1>
+            </div>
+  
+            <div class="card">
+              <div class="card-inner">
+                <h3>CORTE DE PIEZAS</h3>
+              </div>
+              <div class="radial" id="radial-chart1"></div>
+              <h1>2235</h1>
+            </div>
+  
+            <div class="card">
+              <div class="card-inner">
+                <h3>ARMADO DE GABINETE</h3>
+              </div>
+              <div class="radial" id="radial-chart2"></div>
+              <h1>1500</h1>
+            </div>
+  
+            <div class="card">
+              <div class="card-inner">
+                <h3>CARGA DE SOFTWARE</h3>
+              </div>
+              <div class="radial" id="radial-chart3"></div>
+              <h1>5612</h1>
+            </div>
+  
+          </div>
+        <!-- === -->
+
+        
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <h2 class="chart-title">Progreso</h2>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title">Errores</h2>
+            <div id="area-chart"></div>
+          </div>
+
+        </div>
+
+
+        <div id="image-bar"></div>
+      </main>
+ 
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
